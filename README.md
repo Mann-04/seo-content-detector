@@ -23,23 +23,6 @@ Built as a **Data Science Assignment** for **AI/ML Engineer** role.
 - **Saved Models & Vectorizers** for production use
 
 ---
-## Project Structure
-
-.
-├── data/
-│   ├── data.csv                  # Input dataset (HTML content)
-│   ├── extracted_content.csv     # Parsed titles & body text
-│   ├── features.csv              # Engineered features
-│   └── duplicates.csv            # Detected duplicates
-├── models/
-│   ├── tfidf_vectorizer.pkl      # Trained TF-IDF model
-│   └── quality_model.pkl         # Trained Random Forest
-├── seo_pipeline.ipynb            # Main Jupyter Notebook
-├── README.md
-├── requirements.txt
-└── .gitignore
-
----
 
 ## Installation
 
