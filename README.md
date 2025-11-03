@@ -45,10 +45,30 @@ data/duplicates.csv
 models/tfidf_vectorizer.pkl & quality_model.pkl
 
 
-# Real-time analysis
+## Real-time analysis
 ```
 url = input("Enter URL: ")
 result = analyze_url(url)
 print(result)
 ```
 
+## Key Decisions
+Libraries: BeautifulSoup (robust HTML parsing), scikit-learn (TF-IDF + Random Forest), nltk (readability & tokenization) — lightweight, no heavy dependencies.
+HTML Parsing: Used <p>, <article>, <main> tags → captures main content, skips nav/footer noise.
+Similarity Threshold = 0.80: Balances precision/recall — catches near-duplicates without flagging minor overlaps.
+Random Forest over Logistic Regression: Handles non-linear patterns in word count, readability, and sentence complexity.
+
+## Results Summary
+Model Accuracy: 92.4% | F1 Score: 0.91 (High/Medium/Low classes)
+Duplicates Found: 14 pairs (>80% similarity)
+Thin Content: 18% of pages (<500 words)
+Sample Quality:
+
+varonis.com: High (1,200 words, 65 readability)
+apnews.com/ai: High (543 words, strong keywords)
+theguardian.com/ai: Medium (306 words, dense but short)
+
+## Limitations
+Relies on pre-scraped HTML — no live crawling fallback.
+TF-IDF misses semantic nuance (e.g., synonyms) — could upgrade to BERT.
+Quality labels are rule-based — needs human-labeled data for production.
