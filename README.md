@@ -27,6 +27,28 @@ Built as a **Data Science Assignment** for **AI/ML Engineer** role.
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/seo-content-detector.git
+git clone https://github.com/yourusername/seo-content-detector
 cd seo-content-detector
 pip install -r requirements.txt
+jupyter notebook notebooks/seo_pipeline.ipynb
+```
+
+## Quick Start
+
+### Download dataset
+Kaggle Primary → Save as data/data.csv
+### Run the notebook
+Execute all cells → Generates:
+data/extracted_content.csv
+data/features.csv
+data/duplicates.csv
+models/tfidf_vectorizer.pkl & quality_model.pkl
+
+
+# Real-time analysis
+```
+url = input("Enter URL: ")
+result = analyze_url(url)
+print(result)
+```
+
