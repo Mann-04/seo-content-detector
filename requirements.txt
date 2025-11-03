@@ -1,0 +1,9 @@
+Requirement          Status
+Jupyter Notebook     seo_pipeline.ipynb
+GitHub Repo          This repo
+HTML Parsing         parse_html()
+Feature Engineering  "Word count, readability, TF-IDF"
+Duplicate Detection   Cosine > 0.80
+Quality Model         Random Forest
+Real-time Demo        analyze_url()
+CSV Outputs           All saved in data/
